@@ -1,0 +1,35 @@
+.strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  padding: 36px 48px;
+  border-top: 1px solid rgba(180, 130, 255, 0.1);
+  border-bottom: 1px solid rgba(180, 130, 255, 0.1);
+  background: rgba(18, 8, 30, 0.5);
+  flex-wrap: wrap;
+}
+
+.item {
+  font-family: var(--font-dm-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .strip { gap: 20px; padding: 28px 20px; }
+}

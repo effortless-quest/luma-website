@@ -1,0 +1,43 @@
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-dm-mono: 'DM Mono', monospace;
+
+  --gold: #d4a830;
+  --pale: #f5e8c0;
+  --muted: rgba(200, 180, 150, 0.72);
+  --bg: #060410;
+  --glass: rgba(28, 12, 40, 0.7);
+  --border: rgba(180, 130, 255, 0.18);
+  --text-main: rgba(248, 238, 218, 0.96);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-cormorant);
+  overflow-x: hidden;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

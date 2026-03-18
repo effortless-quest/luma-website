@@ -1,0 +1,42 @@
+.section {
+  padding: 80px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 680px;
+  text-align: center;
+  position: relative;
+}
+
+.inner::before {
+  content: '\201C';
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-family: var(--font-cormorant);
+  color: rgba(212, 168, 48, 0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote {
+  font-size: clamp(20px, 3vw, 34px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin-bottom: 28px;
+}
+
+.attr {
+  font-family: var(--font-dm-mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
