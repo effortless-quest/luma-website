@@ -6,11 +6,11 @@ export default function Download() {
       <div className={styles.inner}>
         <span className={styles.badge}>Version 1.0 · Initial Release</span>
         <h2 className={styles.title}>
-          Begin your<br /><em>journey with Luma</em>
+          Put your businesses<br /><em>on autopilot</em>
         </h2>
         <p className={styles.sub}>
-          Free, open source, and completely private.<br />
-          Your journal is ready when you are.
+          Free, open source, and completely local.<br />
+          Your control center is ready when you are.
         </p>
         <div className={styles.btns}>
           <a

@@ -3,11 +3,11 @@
 import styles from './Strip.module.css'
 
 const ITEMS = [
-  '100% Local Processing',
-  'Zero Cloud Dependency',
-  'End-to-End Encryption',
+  'Runs Businesses Autonomously',
+  '100% Local · No Cloud',
+  'Orders · Inventory · Marketing',
   'Open Source',
-  '15+ Languages',
+  'Your Personal Jarvis',
 ]
 
 export default function Strip() {

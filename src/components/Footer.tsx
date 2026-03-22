@@ -11,7 +11,7 @@ export default function Footer() {
         <li><a href="https://github.com/effortless-quest/luma/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
       </ul>
 
-      <p className={styles.copy}>© 2025 Elif Cakmak · All rights reserved</p>
+      <p className={styles.copy}>© 2025 Effortless Quest · All rights reserved</p>
     </footer>
   )
 }

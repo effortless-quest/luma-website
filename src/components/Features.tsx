@@ -4,12 +4,12 @@ import { useEffect, useRef } from 'react'
 import styles from './Features.module.css'
 
 const FEATURES = [
-  { icon: '🕯️', title: 'Rich Text Journal',    desc: 'A beautiful, distraction-free writing canvas that adapts to any time of day. Morning light, evening warmth, deep night — Luma sets the atmosphere.', tag: 'Daily writing' },
-  { icon: '🧠', title: 'Local AI Companion',   desc: 'Powered by Ollama running entirely on your machine. Ask Luma to reflect on your entry, explore a feeling, or keep you company — no internet required.', tag: 'Ollama · On-device' },
-  { icon: '🔍', title: 'Contextual Memory',    desc: 'Semantic search through all your past entries using RAG. Find a memory not by keywords, but by meaning and feeling.', tag: 'Semantic RAG' },
-  { icon: '🌙', title: 'Mood Insights',        desc: 'Luma quietly tracks the emotional tone of your writing over time. See trends, understand your patterns, notice how you\'ve grown.', tag: 'Sentiment analysis' },
-  { icon: '🔒', title: 'Encryption & Privacy', desc: 'Password-protect your journal with full encryption. Your words are yours alone — Luma never touches a server.', tag: 'E2E encrypted' },
-  { icon: '📅', title: 'Daily Schedule',       desc: 'Build routines, plan your days, and reflect on how you spent your time. Luma holds your structure so your mind can wander freely.', tag: 'Planning + reflection' },
+  { icon: '📦', title: 'Order Management',     desc: 'Luma handles incoming orders, queues production, updates your shop, and notifies you only when it\'s time to ship. You stay out of the day-to-day.', tag: 'Fully automated' },
+  { icon: '📸', title: 'Marketing Pipeline',   desc: 'Luma creates short-form content, posts to social media, updates your website when new products drop, and tracks what\'s growing.', tag: 'Content · Social · Growth' },
+  { icon: '📊', title: 'Inventory Control',    desc: 'Tracks stock levels across all your businesses, reorders supplies automatically, and keeps your listings accurate — no manual counting.', tag: 'Always in stock' },
+  { icon: '🧠', title: 'Local AI — No Cloud',  desc: 'Luma runs on your own hardware using Ollama. No subscription, no data leaving your network, no monthly AI bill.', tag: 'Ollama · On-device' },
+  { icon: '📔', title: 'Journal Section',      desc: 'A private space to write, think, and reflect. Luma listens, remembers your entries, and helps you go deeper — all local, all yours.', tag: 'Personal · Private' },
+  { icon: '📅', title: 'Daily Command Center', desc: 'See every business at a glance. Schedules, tasks, performance — one screen to run everything without switching between a dozen apps.', tag: 'One screen · Full control' },
 ]
 
 export default function Features() {
@@ -26,9 +26,9 @@ export default function Features() {
 
   return (
     <section className={styles.section} id="features" ref={ref}>
-      <p className={`${styles.label} ${styles.reveal}`}>What Luma offers</p>
+      <p className={`${styles.label} ${styles.reveal}`}>What Luma does</p>
       <h2 className={`${styles.title} ${styles.reveal}`}>
-        Everything you need,<br /><em>nothing leaves your device</em>
+        One control center,<br /><em>every business automated</em>
       </h2>
       <div className={styles.grid}>
         {FEATURES.map(f => (

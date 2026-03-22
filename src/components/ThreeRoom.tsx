@@ -508,13 +508,16 @@ export default function ThreeRoom({ scene, view }: ThreeRoomProps) {
     const stringCurve = new THREE.CatmullRomCurve3(bulbPositions)
     threeScene.add(new THREE.Mesh(new THREE.TubeGeometry(stringCurve, 54, 0.006, 4, false), new THREE.MeshStandardMaterial({ color: '#3A2820', roughness: 0.8 })))
 
-    // Moon
-    const moonShape = new THREE.Shape(); moonShape.absarc(0, 0, 0.30, 0, Math.PI * 2, false)
-    const moonCutout = new THREE.Path(); moonCutout.absarc(0.17, 0.07, 0.26, 0, Math.PI * 2, true); moonShape.holes.push(moonCutout)
+    // Moon — two-disc crescent: gold circle behind, cutout disc in front that lerps to sky color
     const moonMat = new THREE.MeshBasicMaterial({ color: '#FFD060', transparent: true, opacity: 1.0 })
-    const moon = new THREE.Mesh(new THREE.ShapeGeometry(moonShape, 48), moonMat); moon.position.set(1.6, 5.2, bZ - 2.48); threeScene.add(moon)
-    const moonHaloMat = new THREE.MeshBasicMaterial({ color: '#FFB030', transparent: true, opacity: 0.04, side: THREE.DoubleSide })
-    const moonHalo = new THREE.Mesh(new THREE.CircleGeometry(0.55, 24), moonHaloMat); moonHalo.position.set(1.6, 5.2, bZ - 2.50); threeScene.add(moonHalo)
+    const moon = new THREE.Mesh(new THREE.CircleGeometry(0.30, 32), moonMat)
+    moon.position.set(1.6, 5.2, bZ - 2.48); threeScene.add(moon)
+    const moonCutMat = new THREE.MeshBasicMaterial({ color: '#1A0A30' })
+    const moonCut = new THREE.Mesh(new THREE.CircleGeometry(0.27, 32), moonCutMat)
+    moonCut.position.set(1.6 + 0.16, 5.2 + 0.05, bZ - 2.47); threeScene.add(moonCut)
+    const moonHaloMat = new THREE.MeshBasicMaterial({ color: '#FFB030', transparent: true, opacity: 0.0, side: THREE.DoubleSide })
+    const moonHalo = new THREE.Mesh(new THREE.CircleGeometry(0.55, 24), moonHaloMat)
+    moonHalo.position.set(1.6, 5.2, bZ - 2.50); moonHalo.visible = false; threeScene.add(moonHalo)
     const moonLight = new THREE.PointLight('#8080C0', 0.8, 10); moonLight.position.set(0, 4, bZ + 1); threeScene.add(moonLight)
 
     // Stars

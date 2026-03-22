@@ -61,11 +61,11 @@ export default function Hero() {
 
       {/* Hero text */}
       <div className={styles.content}>
-        <p className={styles.eyebrow}>✦ &nbsp;Private · Local · Peaceful &nbsp;✦</p>
+        <p className={styles.eyebrow}>✦ &nbsp;Local · Private · Autonomous &nbsp;✦</p>
         <h1 className={styles.title}>
-          Write with<br /><em>gentle focus</em>
+          Your business<br /><em>runs itself</em>
         </h1>
-        <p className={styles.sub}>your private, local AI journaling companion</p>
+        <p className={styles.sub}>Luma is your AI control center — it runs your businesses so you don&apos;t have to</p>
         <div className={styles.btns}>
           <a
             href="https://github.com/effortless-quest/luma/releases/latest"

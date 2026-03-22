@@ -1,9 +1,9 @@
 import styles from './HowItWorks.module.css'
 
 const STEPS = [
-  { num: 'I',   title: 'Download & install Luma',    desc: 'Grab the latest release from GitHub. Luma is a native desktop app built with Tauri, available for Linux, macOS, and Windows.' },
-  { num: 'II',  title: 'Install Ollama (optional)',  desc: 'For AI conversations and mood analysis, install Ollama and pick a model — Mistral, Phi, TinyLlama, or any from the library. All local, all private.' },
-  { num: 'III', title: 'Begin your first entry',     desc: 'Open Luma, pick your scene — beach, city, or forest — and start writing. The room shifts with the time of day. Your words stay on your device, forever.' },
+  { num: 'I',   title: 'Download & install Luma',     desc: 'Grab the latest release from GitHub. Luma is a native desktop app built with Tauri, available for Linux, macOS, and Windows.' },
+  { num: 'II',  title: 'Connect your businesses',     desc: 'Tell Luma which business models you run — crocheting, content creation, sales, print on demand. It auto-configures itself for each one.' },
+  { num: 'III', title: 'Step back. Luma runs it.',    desc: 'Orders, inventory, marketing, social posts, website updates — Luma handles operations autonomously. You get notified only when something needs you.' },
 ]
 
 export default function HowItWorks() {
@@ -11,7 +11,7 @@ export default function HowItWorks() {
     <section className={styles.section} id="how">
       <p className={styles.label}>How it works</p>
       <h2 className={styles.title}>
-        Simple to start,<br /><em>yours to keep</em>
+        Three steps to a<br /><em>running business</em>
       </h2>
       <div className={styles.steps}>
         {STEPS.map(step => (
